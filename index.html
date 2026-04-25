@@ -272,7 +272,7 @@
 
     .pillars {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
       gap: 28px;
       margin-top: 56px;
       justify-content: center;
@@ -286,6 +286,11 @@
     }
 
     .pillar:hover { border-color: var(--gold); }
+
+    /* Center last card when alone on a row */
+    .pillar:last-child:nth-child(3n+1) {
+      grid-column: 2;
+    }
 
     .pillar-icon {
       font-size: 1.5rem;
@@ -515,12 +520,12 @@
       <h2 class="section-title">What Makes This Different</h2>
       <div class="pillars">
         <div class="pillar">
-          <div class="pillar-icon">ð¤</div>
+          <div class="pillar-icon">🤝</div>
           <h3>No Brokers Involved</h3>
           <p>You deal directly with me - the decision-maker. No middlemen, no commissions taken from your side.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">ð</div>
+          <div class="pillar-icon">🔒</div>
           <h3>Complete Confidentiality</h3>
           <p>Your information stays private. I don't share your details with anyone outside of the transaction.</p>
         </div>
@@ -530,7 +535,7 @@
           <p>I make decisions quickly. No long committee processes - just a straightforward yes or no.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">ð</div>
+          <div class="pillar-icon">📋</div>
           <h3>No Obligation</h3>
           <p>Submitting your facility info or having a conversation doesn't commit you to anything. Zero pressure.</p>
         </div>
