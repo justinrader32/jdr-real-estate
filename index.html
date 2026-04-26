@@ -412,6 +412,7 @@
       width: 100% !important;
     }
   section.process { display: none; }    </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d1b2e'/><text y='.9em' font-size='80' x='50%' dominant-baseline='top' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold' fill='%234a90d9'>J</text></svg>" />
 </head>
 <body>
 
@@ -458,6 +459,9 @@
   <section class="about" id="about">
     <div class="container">
       <div class="two-col">
+        <div class="about-photo">
+          <img src="justin.jpg" alt="Justin Rader" style="width:100%;max-width:340px;border-radius:12px;display:block;margin:0 auto;" />
+        </div>
         <div>
           <div class="section-tag">About Justin Rader</div>
           <h2 class="section-title">A Private Buyer Who Takes This Seriously</h2>
@@ -552,26 +556,39 @@
         <div class="form-intro">
           <div class="section-tag">Get Started</div>
           <h2 class="section-title">Tell Me About Your Facility</h2>
-          <p class="section-body">Whether you're ready to sell now or just curious about what your facility is worth, fill out the form and I'll personally reach out. No pressure, no commitment.</p>
+          <p class="section-body">Whether you're ready to sell now or just curious what your facility is worth, send me a quick note and I'll personally reach out within 24-48 hours. No pressure, no commitment.</p>
           <ul class="form-checklist">
-            <li>Takes about 2 minutes to complete</li>
-            <li>I review every submission personally</li>
-            <li>You'll hear back within 24-48 hours</li>
-            <li>Your information is kept completely private</li>
-            <li>No obligation - just a conversation</li>
+            <li><span class="check">✓</span> I review every submission personally</li>
+            <li><span class="check">✓</span> You'll hear back within 24-48 hours</li>
+            <li><span class="check">✓</span> Your information is kept completely private</li>
+            <li><span class="check">✓</span> No obligation - just a conversation</li>
           </ul>
-          <br/>
-          <p style="font-size:0.85rem; color: var(--text-muted);">Prefer email? Reach me directly at <a href="mailto:justin@jdrrealestate.com" style="color:var(--gold);">justin@jdrrealestate.com</a></p>
+          <p style="margin-top:24px;color:var(--text-muted);font-size:0.9rem;">Prefer email? Reach me directly at <a href="mailto:justin@jdrrealestate.com" style="color:var(--gold)">justin@jdrrealestate.com</a></p>
         </div>
-        <div class="hs-form-container">
-          <h3>Self-Storage Facility Intake</h3>
-          <p>All fields marked with * are required.</p>
-          <!-- HubSpot Embed -->
-          <script src="https://js.hsforms.net/forms/embed/48921311.js" defer></script>
-          <div class="hs-form-frame" data-region="na1" data-form-id="82043a2e-63ec-4013-877d-4ce6e0f9e98b" data-portal-id="48921311"></div>
+        <div class="form-fields" style="background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;padding:40px 36px;">
+          <h3 style="color:var(--white);font-size:1.25rem;margin-bottom:8px;">Quick Intro</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:28px;">Just three fields - I'll take it from there.</p>
+          <form name="contact" method="POST" data-netlify="true" style="display:flex;flex-direction:column;gap:20px;">
+            <div>
+              <label style="display:block;color:var(--off-white);font-size:0.85rem;margin-bottom:6px;font-weight:500;">Your Name *</label>
+              <input type="text" name="name" required placeholder="John Smith" style="width:100%;padding:12px 14px;background:var(--navy);border:1px solid var(--border);border-radius:6px;color:var(--white);font-size:1rem;box-sizing:border-box;" />
+            </div>
+            <div>
+              <label style="display:block;color:var(--off-white);font-size:0.85rem;margin-bottom:6px;font-weight:500;">Email Address *</label>
+              <input type="email" name="email" required placeholder="john@example.com" style="width:100%;padding:12px 14px;background:var(--navy);border:1px solid var(--border);border-radius:6px;color:var(--white);font-size:1rem;box-sizing:border-box;" />
+            </div>
+            <div>
+              <label style="display:block;color:var(--off-white);font-size:0.85rem;margin-bottom:6px;font-weight:500;">Facility Location</label>
+              <input type="text" name="location" placeholder="City, State" style="width:100%;padding:12px 14px;background:var(--navy);border:1px solid var(--border);border-radius:6px;color:var(--white);font-size:1rem;box-sizing:border-box;" />
+            </div>
+            <div>
+              <label style="display:block;color:var(--off-white);font-size:0.85rem;margin-bottom:6px;font-weight:500;">Anything else? (optional)</label>
+              <textarea name="message" rows="3" placeholder="Approx. units, timeline, questions..." style="width:100%;padding:12px 14px;background:var(--navy);border:1px solid var(--border);border-radius:6px;color:var(--white);font-size:1rem;box-sizing:border-box;resize:vertical;"></textarea>
+            </div>
+            <button type="submit" style="background:var(--gold);color:var(--navy);font-weight:700;font-size:1rem;padding:14px 28px;border:none;border-radius:6px;cursor:pointer;transition:opacity 0.2s;">Send My Info</button>
+          </form>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- FOOTER -->
