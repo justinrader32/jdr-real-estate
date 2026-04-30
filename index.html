@@ -407,21 +407,16 @@
 
     footer a:hover { text-decoration: underline; }
 
-    /* HubSpot overrides */
-    .hs-form-frame, .hs-form-frame iframe {
-      width: 100% !important;
-    }
-            .hs-form label, .hs-form .hs-field-desc {
-                        color: #333333 !important;
-                        font-weight: 600 !important;
-            }
-            .hs-form input, .hs-form textarea, .hs-form select {
-                        color: #333333 !important;
-            }
-            .hs-form input::placeholder, .hs-form textarea::placeholder {
-                        color: #777777 !important;
-            }
-  section.process { display: none; }    </style>
+    /* Form styles */
+        .hs-native-form { display:flex; flex-direction:column; gap:18px; }
+        .hs-field { display:flex; flex-direction:column; gap:6px; }
+        .hs-field label { color:#333333; font-size:0.88rem; font-weight:600; }
+        .hs-req { color:#e05555; }
+        .hs-field input, .hs-field textarea { background:var(--off-white); border:1px solid #cccccc; border-radius:6px; padding:12px 14px; font-size:0.95rem; color:#333333; font-family:'Inter',sans-serif; width:100%; box-sizing:border-box; }
+        .hs-field textarea { min-height:100px; resize:vertical; }
+        .hs-field input::placeholder, .hs-field textarea::placeholder { color:#999999; }
+        .hs-field input:focus, .hs-field textarea:focus { outline:none; border-color:var(--gold); }
+        section.process { display: none; }    </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d1b2e'/><text y='.9em' font-size='80' x='50%' dominant-baseline='top' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold' fill='%234a90d9'>J</text></svg>" />
 </head>
 <body>
@@ -482,11 +477,11 @@
         <div style="padding: 40px; background: var(--navy-light); border: 1px solid var(--border); border-radius: 8px;">
           <div class="section-tag">What I Look For</div>
           <ul style="list-style:none; margin-top: 16px;">
-            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">✦ &nbsp;Self-storage facilities of all sizes</li>
-            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">✦ &nbsp;Any condition - stabilized or value-add</li>
-            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">✦ &nbsp;On-market or off-market properties</li>
-            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">✦ &nbsp;Mixed-use with storage component</li>
-            <li style="padding: 14px 0; color: var(--text-muted); font-size:0.92rem;">✦ &nbsp;All markets considered</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">â¦ &nbsp;Self-storage facilities of all sizes</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">â¦ &nbsp;Any condition - stabilized or value-add</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">â¦ &nbsp;On-market or off-market properties</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text-muted); font-size:0.92rem;">â¦ &nbsp;Mixed-use with storage component</li>
+            <li style="padding: 14px 0; color: var(--text-muted); font-size:0.92rem;">â¦ &nbsp;All markets considered</li>
           </ul>
         </div>
       </div>
@@ -536,22 +531,22 @@
       <h2 class="section-title">What Makes This Different</h2>
       <div class="pillars">
         <div class="pillar">
-          <div class="pillar-icon">🤝</div>
+          <div class="pillar-icon">ð¤</div>
           <h3>No Brokers Involved</h3>
           <p>You deal directly with me - the decision-maker. No middlemen, no commissions taken from your side.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">🔒</div>
+          <div class="pillar-icon">ð</div>
           <h3>Complete Confidentiality</h3>
           <p>Your information stays private. I don't share your details with anyone outside of the transaction.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">⚡</div>
+          <div class="pillar-icon">â¡</div>
           <h3>Fast, Certain Decisions</h3>
           <p>I make decisions quickly. No long committee processes - just a straightforward yes or no.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">📋</div>
+          <div class="pillar-icon">ð</div>
           <h3>No Obligation</h3>
           <p>Submitting your facility info or having a conversation doesn't commit you to anything. Zero pressure.</p>
         </div>
@@ -568,26 +563,35 @@
           <h2 class="section-title">Tell Me About Your Facility</h2>
           <p class="section-body">Whether you're ready to sell now or just curious what your facility is worth, send me a quick note and I'll personally reach out within 24-48 hours. No pressure, no commitment.</p>
           <ul class="form-checklist">
-            <li><span class="check">✓</span> I review every submission personally</li>
-            <li><span class="check">✓</span> You'll hear back within 24-48 hours</li>
-            <li><span class="check">✓</span> Your information is kept completely private</li>
-            <li><span class="check">✓</span> No obligation - just a conversation</li>
+            <li><span class="check">â</span> I review every submission personally</li>
+            <li><span class="check">â</span> You'll hear back within 24-48 hours</li>
+            <li><span class="check">â</span> Your information is kept completely private</li>
+            <li><span class="check">â</span> No obligation - just a conversation</li>
           </ul>
           <p style="margin-top:24px;color:var(--text-muted);font-size:0.9rem;">Prefer email? Reach me directly at <a href="mailto:justin@jdrrealestate.com" style="color:var(--gold)">justin@jdrrealestate.com</a></p>
         </div>
         <div class="form-fields" id="hubspot-form" style="background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;padding:40px 36px;">
           <h3 style="color:var(--white);font-size:1.25rem;margin-bottom:8px;">Quick Intro</h3>
           <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:28px;">A few quick fields - I'll take it from there.</p>
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-    <script>
-      hbspt.forms.create({
-        region: "na1",
-        portalId: "48921311",
-        formId: "fb309f4e-f6f7-4ef9-886f-d8634906bd76",
-                cssRequired: "",
-                  css: ""
-      });
-    </script>
+          <form id="contact-form" class="hs-native-form">
+            <div class="hs-field"><label for="fn">Your Name <span class="hs-req">*</span></label><input type="text" id="fn" name="firstname" placeholder="John Smith" required></div>
+            <div class="hs-field"><label for="em">Email Address <span class="hs-req">*</span></label><input type="email" id="em" name="email" placeholder="john@example.com" required></div>
+            <div class="hs-field"><label for="fl">Facility Location</label><input type="text" id="fl" name="facility_location" placeholder="City, State"></div>
+            <div class="hs-field"><label for="mg">Anything else?</label><textarea id="mg" name="message" placeholder="Approx. units, timeline, questions..."></textarea></div>
+            <div class="hs-field"><label for="ph">Phone number</label><input type="tel" id="ph" name="phone"></div>
+            <div class="hs-field"><label for="fnm">Facility Name</label><input type="text" id="fnm" name="facility_name"></div>
+            <div id="form-msg" style="display:none;margin-bottom:12px;font-weight:600;color:#4a90d9;"></div>
+            <button type="submit" class="cta-btn">Send My Info</button>
+          </form>
+          <script>
+          document.getElementById('contact-form').addEventListener('submit',function(e){
+            e.preventDefault();var f=e.target;
+            fetch('https://api.hsforms.com/submissions/v3/integration/submit/48921311/fb309f4e-f6f7-4ef9-886f-d8634906bd76',{
+              method:'POST',headers:{'Content-Type':'application/json'},
+              body:JSON.stringify({fields:[{name:'firstname',value:f.firstname.value},{name:'email',value:f.email.value},{name:'facility_location__c',value:f.facility_location.value},{name:'message',value:f.message.value},{name:'phone',value:f.phone.value},{name:'facility_name__c',value:f.facility_name.value}],context:{pageUri:location.href,pageName:document.title}})
+            }).then(function(r){var m=document.getElementById('form-msg');m.style.display='block';if(r.ok){m.textContent="Thanks! I'll be in touch soon.";f.reset();}else{m.style.color='#e05';m.textContent='Something went wrong. Please try again.';}});
+          });
+          </script>
         </div>
       </div>
   </section>
@@ -595,7 +599,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">JDR <span>Real Estate</span></div>
-    <p>© 2026 JDR Real Estate. All rights reserved.</p>
+    <p>Â© 2026 JDR Real Estate. All rights reserved.</p>
     <a href="mailto:justin@jdrrealestate.com">justin@jdrrealestate.com</a>
   </footer>
 
